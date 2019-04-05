@@ -31,3 +31,9 @@ test('should return proper message when status differs from ok', () => {
   const expectedMessage = 'Информация об уровне временно недоступна';
   expect(getLevel(1)).toBe(expectedMessage);
 });
+
+test('should return proper message when no status', () => {
+  fetchData.mockReturnValue(JSON.stringify({}));
+  const expectedMessage = 'Информация об уровне временно недоступна';
+  expect(getLevel(1)).toBe(expectedMessage);
+});
