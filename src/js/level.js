@@ -2,10 +2,10 @@
 import fetchData from '../shared/http';
 
 const getLevel = (userId) => {
-  const response = fetchData(`https://server/user/${userId}`);
+  const responce = fetchData(`https://server/user/${userId}`);
 
   // TODO: логика обработки
-  if (response.status === 'ok') {
+  if (responce.status === 'ok') {
     return `Ваш текущий уровень: ${response.level}`;
   }
 
